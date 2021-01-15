@@ -8,4 +8,4 @@ fi
 
 touch "$rc"
 grep -q '^source .*bashrc\.sh$' "$rc" && echo 'already installed?' && exit
-printf 'source %q\n' "$(cd "$(dirname "$0")"; pwd)/bashrc.sh" >> "$rc"
+printf 'source %q\n' "$(cd "$(dirname "$1")"; pwd)/bashrc.sh" >> "$rc"
